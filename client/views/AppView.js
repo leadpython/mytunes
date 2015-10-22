@@ -11,22 +11,25 @@ var AppView = Backbone.View.extend({
     var poop = this;
 
     this.playerView.$el.on('ended', function() {
-      console.log('pizza');
       poop.model.get('songQueue').ended();
       poop.songQueueView.deleteDiv();
     });
 
     this.model.on('change:currentSong', function(model) {
+      this.libraryView.render();
       this.playerView.setSong(model.get('currentSong'));
     }, this);
   },
 
   render: function() {
-    return this.$el.html([
-      this.playerView.$el,
+    this.$el.html([
       this.libraryView.$el,
-      this.songQueueView.$el
+      this.songQueueView.$el,
+      this.playerView.$el
     ]);
+    this.$el.prepend('<div class="title">SPOTIFYSH <img src="spotifysh.png"></img></div>');
+    this.$el.addClass('appView');
+    return this.$el;
   }
 
 });

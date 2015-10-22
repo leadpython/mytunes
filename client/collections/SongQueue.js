@@ -8,13 +8,17 @@ var SongQueue = Songs.extend({
   },
 
   enqueue: function(modelSong) {
-    this.add(modelSong);
-    if (this.length === 1) {
+    if (this.length === 0) {
+      this.add(modelSong);
       this.playFirst();
+    } else{
+      this.add(modelSong);
     }
+
   },
 
   playFirst: function(){
+    this.at(0).attributes.playCount++;
     this.at(0).play();
   },
 
@@ -25,11 +29,13 @@ var SongQueue = Songs.extend({
 
   ended: function(){
     //end the model
+     // this.at(0).attributes.playCount--;
     this.dequeue();
     if(this.length > 0){
       this.playFirst();
+      
     } 
-  },
+  }
 
   
 

@@ -1,0 +1,76 @@
+body {
+  background-color: #191919;
+  margin: auto;
+  width: 60%;
+  
+
+}
+
+div {
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 250;
+  line-height: 26.3999996185303px;
+}
+
+table{
+  border:3px solid #8AC007;
+  padding: 10px;
+
+}
+
+.songQueue {
+  border:3px solid #8AC007;
+  padding: 10px;
+}
+
+.libraryView{
+  border:3px solid #8AC007;
+  padding: 10px;
+
+}
+
+audio {
+  width: 800px;
+  float: bottom;
+  position: absolute;
+  bottom: 0;
+}
+
+.appView {
+  height: 850px;
+  position: relative;
+}
+
+.entryView {
+  border:1px solid gray;
+  padding: 10px;
+
+}
+
+.queueEntry {
+  border:1px solid gray;
+  padding: 10px;
+
+}
+
+.title {
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 250;
+  padding: 10px;
+  line-height: 26.3999996185303px;
+
+}
+
+img {
+  url: ('spotifysh.png');
+  width: 100px;
+  height: 100px;
+}
