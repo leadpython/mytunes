@@ -13,6 +13,7 @@ var AppView = Backbone.View.extend({
     this.playerView.$el.on('ended', function() {
       console.log('pizza');
       poop.model.get('songQueue').ended();
+      poop.songQueueView.deleteDiv();
     });
 
     this.model.on('change:currentSong', function(model) {

@@ -9,10 +9,15 @@ var SongQueueView = Backbone.View.extend({
 
   render: function() {
     this.$el.empty();
+    this.$el.append('<p><b>Song Queue</b></p>');
     this.collection.forEach(function(songModel) {
       var songView = new SongQueueEntryView({model: songModel});
       this.$el.append(songView.render());
     }, this);
+  },
+
+  deleteDiv: function() {
+    this.$el.find('div').first('div').remove();
   }
 
 });
