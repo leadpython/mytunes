@@ -8,8 +8,8 @@ var SongQueue = Songs.extend({
   },
 
   enqueue: function(modelSong) {
+    this.add(modelSong);
     if (this.length === 1) {
-      this.add(modelSong);
       this.playFirst();
     }
   },
