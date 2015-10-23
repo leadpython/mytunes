@@ -5,6 +5,7 @@ var SongQueue = Songs.extend({
     this.on('add', this.enqueue, this);
     this.on('dequeue', this.dequeue, this);
     this.on('ended', this.ended, this);
+    this.on('emptyQueue', this.emptyQueue, this);
   },
 
   enqueue: function(modelSong) {
@@ -35,6 +36,10 @@ var SongQueue = Songs.extend({
       this.playFirst();
       
     } 
+  },
+
+  emptyQueue: function() {
+    this.reset();
   }
 
   

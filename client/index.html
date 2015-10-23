@@ -34,6 +34,32 @@
 
         // put the view onto the screen
         $('body').append(appView.render());
+
+        $(".spotifyshIMG").focus();
+        ("body").on('keydown', '.spotifyshIMG', function(event){
+            switch(event.which){
+                case 37:
+                    $('.spotifyshIMG').stop().animate({
+                        left: '-=10'
+                    }); //left arrow key
+                    break;
+                case 38: 
+                    $('.spotifyshIMG').stop().animate({
+                                top: '-=10'
+                    }); //up arrow key
+                    break;
+                case 39:
+                    $('.spotifyshIMG').stop().animate({
+                        left: '+=10'
+                    }); //right arrow key
+                    break;
+                case 40: 
+                    $('.spotifyshIMG').stop().animate({
+                        top: '+=10'
+                    }); //bottom arrow key
+                    break;
+            }
+        });
       });
     </script>
   </body>

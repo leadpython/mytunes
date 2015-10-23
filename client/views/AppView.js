@@ -6,6 +6,7 @@ var AppView = Backbone.View.extend({
     this.libraryView = new LibraryView({collection: this.model.get('library')});
     this.songQueueView = new SongQueueView({collection: this.model.get('songQueue')});
 
+
     // change:currentSong - this is Backbone's way of allowing you to filter events to
     // ONLY receive change events for the specific property, 'currentSong'
     var poop = this;
@@ -19,6 +20,10 @@ var AppView = Backbone.View.extend({
       this.libraryView.render();
       this.playerView.setSong(model.get('currentSong'));
     }, this);
+
+    $('body').on('click', '.queueIMG', function() {
+      // this.model.
+    });
   },
 
   render: function() {
@@ -27,7 +32,8 @@ var AppView = Backbone.View.extend({
       this.songQueueView.$el,
       this.playerView.$el
     ]);
-    this.$el.prepend('<div class="title">SPOTIFYSH <img src="spotifysh.png"></img></div>');
+    this.songQueueView.render();
+    this.$el.prepend('<div class="title"><img class="spotifyshIMG" src="spotifysh.png"></img> Spotifysh</div>');
     this.$el.addClass('appView');
     return this.$el;
   }

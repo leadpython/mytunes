@@ -19,6 +19,8 @@ var SongModel = Backbone.Model.extend({
     this.trigger('ended', this);
   },
 
-  playCount: 0
+  clearQueue: function() {
+    this.trigger('emptyQueue', this);
+  }
 
 });

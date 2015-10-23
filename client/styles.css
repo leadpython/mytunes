@@ -38,6 +38,8 @@ audio {
   float: bottom;
   position: absolute;
   bottom: 0;
+  border:3px solid #8AC007;
+  padding: 10px;
 }
 
 .appView {
@@ -57,20 +59,39 @@ audio {
 
 }
 
+.entryView:hover {
+  background-color: gray;
+}
+
 .title {
   color: white;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 40px;
+  font-size: 70px;
   font-style: normal;
   font-variant: normal;
   font-weight: 250;
-  padding: 10px;
+  padding: 20px;
   line-height: 26.3999996185303px;
 
 }
 
-img {
-  url: ('spotifysh.png');
-  width: 100px;
-  height: 100px;
+.spotifyshIMG {
+  width: 90px;
+  height: 90px;
+  padding: 0px;
+}
+
+.thumbs {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 70px;
+
+}
+
+.queueIMG {
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  right: 20px;
 }
